@@ -632,8 +632,8 @@ class Order extends \Opencart\System\Engine\Controller {
 			$data['telephone'] = '';
 		}
 
-		if (!empty($order_info)) {
-			$data['account_custom_field'] = $order_info['custom_field'];
+		if (!empty($order_info['custom_field']['account'])) {
+			$data['account_custom_field'] = $order_info['custom_field']['account'];
 		} else {
 			$data['account_custom_field'] = [];
 		}
@@ -972,8 +972,8 @@ class Order extends \Opencart\System\Engine\Controller {
 			$data['payment_zone'] = '';
 		}
 
-		if (!empty($order_info)) {
-			$data['payment_custom_field'] = $order_info['payment_custom_field'];
+		if (!empty($order_info['payment_custom_field']['address'])) {
+			$data['payment_custom_field'] = $order_info['payment_custom_field']['address'];
 		} else {
 			$data['payment_custom_field'] = [];
 		}
@@ -1064,8 +1064,8 @@ class Order extends \Opencart\System\Engine\Controller {
 			$data['shipping_zone'] = '';
 		}
 
-		if (!empty($order_info)) {
-			$data['shipping_custom_field'] = $order_info['shipping_custom_field'];
+		if (!empty($order_info['shipping_custom_field']['address'])) {
+			$data['shipping_custom_field'] = $order_info['shipping_custom_field']['address'];
 		} else {
 			$data['shipping_custom_field'] = [];
 		}
